@@ -154,10 +154,10 @@ namespace LoginPage
                 if (result == false)
                 {
                     // Create an instance of ValidationForm
-                    Result Result = new Result();
-                    Result.Show();
+                    //Result Result = new Result();
+                    //Result.Show();
 
-                    result = true;
+                    //result = true;
                 }
 
 
@@ -225,7 +225,7 @@ namespace LoginPage
         }
 
 
-        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        private void btnConfirm_Click(object sender, RoutedEventArgs e)
         {
             DateTime currentDateTime = DateTime.Now;
 

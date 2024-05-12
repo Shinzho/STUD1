@@ -80,6 +80,9 @@ namespace LoginPage
 
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
+            Developer Developer = new Developer();
+            Developer.Show();
+
             /*
             this.mainscrollviewer.Visibility = Visibility.Collapsed;
             this.topgrid.Visibility = Visibility.Collapsed;
@@ -89,6 +92,14 @@ namespace LoginPage
             UserPages.Children.Clear();
             UserPages.Children.Add(x);
             */
+
+            this.mainscrollviewer.Visibility = Visibility.Collapsed;
+            this.topgrid.Visibility = Visibility.Collapsed;
+            this.homePopupBox.Visibility = Visibility.Collapsed;
+
+            BarcodeScanningInterface x = new BarcodeScanningInterface();
+            UserPages.Children.Clear();
+            UserPages.Children.Add(x);
         }
         #endregion
 
@@ -105,5 +116,10 @@ namespace LoginPage
             Process.Start("mailto://jkrbn99@gmail.com");
         }
         #endregion
+
+        private void StudentAttendance_ToolTipOpening(object sender, ToolTipEventArgs e)
+        {
+
+        }
     }
 }
